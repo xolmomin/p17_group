@@ -67,6 +67,14 @@ albums
 
 
 
+django commands
 
+python manage.py
+
+makemigrations
+migrate
+createsuperuser
+changepassword
+startapp
 
 
