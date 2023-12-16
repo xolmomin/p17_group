@@ -1,6 +1,72 @@
 
 1. django models
 2. models meta class
-https://docs.djangoproject.com/en/5.0/topics/db/models/#
+https://docs.djangoproject.com/en/5.0/topics/db/models
+
+
+
+distro
+Ubuntu, CentOs, Debian
+Mint, Ubuntu, Alpine
+
+sudo apt-get install
+
+
+
+docker ps
+docker start
+docker exec -it container_name -U postgres psql
+
+docker run --name pg_container -e POSTGRES_PASSWORD=1 -p 5431:5432 -d postgres:alpine
+docker rm -f pg_container
+
+0.0.0.0:5431->5432/tcp
+
+65535
+
+1.
+docker run --name pg_container -e POSTGRES_PASSWORD=1 -d postgres:alpine
+pycharm db ulash
+
+
+2.
+docker run --name pg_container -e POSTGRES_PASSWORD=1 -p 5431:5432 -d postgres:alpine
+pycharm db ulash
+
+
+3.
+p17_group_db
+docker rm -f pg_container
+docker run --name pg_container -e POSTGRES_PASSWORD=1 -p 5431:5432 -d postgres:alpine
+docker run --name pg_container -e POSTGRES_PASSWORD=1 -p 5431:5432 -v pgdata:/var/lib/postgresql/data -d postgres:alpine
+
+database check
+
+
+edit files in container
+connect remote db
+
+
+# check service
+systemctl status postgresql
+
+
+
+p17_group_db
+
+
+
+
+
+
+safety name
+
+photos
+albums
+
+
+
+
+
 
 

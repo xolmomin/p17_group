@@ -22,8 +22,12 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("user_id", models.PositiveIntegerField()),
-                ("title", models.CharField(max_length=255)),
+                ("title", models.CharField(max_length=255, verbose_name="Sarlavha")),
                 ("body", models.TextField()),
             ],
+            options={
+                "verbose_name": "Elon",
+                "verbose_name_plural": "Elonlar",
+            },
         ),
     ]
