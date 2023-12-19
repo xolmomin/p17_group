@@ -89,13 +89,13 @@ class PostAdmin(admin.ModelAdmin, ExportCsvMixin):
             # v2
             result = []
             for row in reader:
+                print(row)
                 result.append(Post(
                     user_id=int(row[0]),
-                    pk=int(row[1]),
+                    id=int(row[1]),
                     title=row[2],
                     body=row[3]
                 ))
-
             Post.objects.bulk_create(result)
 
             self.message_user(request, "Your csv file has been imported")
@@ -106,6 +106,14 @@ class PostAdmin(admin.ModelAdmin, ExportCsvMixin):
 
     custom_title.short_description = 'Sarlavha'
 
+
+
+'''
+albums
+photos
+
+
+'''
 
 
 # insert into apps_posts values (1,2,3,4),(1,2,3,4);
