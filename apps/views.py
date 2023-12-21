@@ -1,15 +1,14 @@
 # from django.http import HttpResponse, JsonResponse, Http404
 from django.shortcuts import render
 
-from apps.models import Post
+from apps.models import Post, Product
 
 
 def index(request):
-    posts = Post.objects.all()
     context = {
-        'posts': posts
+        'products': Product.objects.all()
     }
-    return render(request, 'apps/index.html', context)
+    return render(request, 'apps/product_list.html', context)
 
 #
 # from apps.models import Post

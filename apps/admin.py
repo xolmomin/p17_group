@@ -6,7 +6,7 @@ from django.urls import path
 import csv
 import io
 
-from apps.models import Post, Comment
+from apps.models import Post, Comment, Category, Product
 
 
 class CsvImportForm(forms.Form):
@@ -107,15 +107,11 @@ class PostAdmin(admin.ModelAdmin, ExportCsvMixin):
     custom_title.short_description = 'Sarlavha'
 
 
-
-'''
-albums
-photos
-
-
-'''
+@admin.register(Category)
+class CategoryAdmin(admin.ModelAdmin):
+    pass
 
 
-# insert into apps_posts values (1,2,3,4),(1,2,3,4);
-# insert into apps_posts values (1,2,3,4);
-
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    pass

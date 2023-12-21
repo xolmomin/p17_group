@@ -8,15 +8,15 @@
     <title>Document</title>
 </head>
 <body>
-{#{% if a == 2 %}#}
-{#    2 ga teng#}
-{#{% else %}#}
-{#    teng emas#}
-{#{% endif %}#}
-{##}
-{#live reload#}
-{##}
-{#<h1>hello {{ bgfdgjd }}</h1>#}
+{% if a == 2 %}
+    2 ga teng
+{% else %}
+    teng emas
+{% endif %}
+
+live reload
+
+<h1>hello {{ bgfdgjd }}</h1>
 
 {% for post in posts %}
     {{ post.id }} <br>
