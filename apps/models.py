@@ -28,7 +28,7 @@ class Category(models.Model):
 class Product(models.Model):
     title = models.CharField(max_length=255)
     price = models.FloatField()
-    image = models.ImageField(upload_to='products/images/')  # pillow
+    image = models.ImageField(upload_to='products/images/', default='products/default.jpg')
     description = RichTextField(blank=True, null=True)
     category = models.ForeignKey('apps.Category', on_delete=models.CASCADE)
     quantity = models.PositiveIntegerField(default=0)
@@ -38,26 +38,3 @@ class Product(models.Model):
     def __str__(self):
         return self.title
 
-
-'''
-1,2,3
-photos -> csv
-albums -> csv
-
-django adminka
-
-15:40
-30min
-
-
-import csv
-
-
-
-
-
-
-1.
-dunderMethod -> dunder_method
-
-'''
